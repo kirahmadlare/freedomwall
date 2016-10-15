@@ -1,0 +1,32 @@
+.media-object{
+	width: 30vw;
+	height: 30vh;
+
+}
+
+.media{
+	margin: 20px;
+}
+strong p {
+	color:red;
+	font-size: .7em;
+}
+#warning{
+	margin: 5px;
+	font-size: .9em;
+}
+#king{
+	font-size: .3em;
+	color: #5cb85c;
+}
+.author{
+
+}
+#delete{
+	display: inline;
+	
+}
+#edit{
+	display: inline;
+
+}

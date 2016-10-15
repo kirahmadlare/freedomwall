@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+
+<div class="container">
+<div class="Jumbotron">
+<h2>Edit your feelings</h2>
+</div>
+<form action="/walls/<%= wall._id %>?_method=PUT" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Author</label>
+    <input type="text" class="form-control" name="wall[author]" id="exampleInputEmail1" placeholder="Author" value="<%= wall.author %>">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Image</label>
+    <input type="text" class="form-control" name="wall[image]" id="exampleInputPassword1" placeholder="ADD IMAGE URL" value="<%= wall.image %>">
+  </div>
+
+  <div class="form-group">
+  <label for="body">Body</label>
+  <textarea class="form-control" rows="3" name="wall[body]">
+  <%- wall.body %> </textarea>
+  </div>
+ 
+  
+  <input type="submit" class="btn btn-primary" value="Update">
+</form>
+
+
+</div>
+
+
+<% include ./partials/footer %>

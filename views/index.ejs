@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+<% walls.forEach(function(wall){ %>
+<div class="container">
+<div class="media">
+  <div class="media-left">
+    <a href="/walls/<%= wall._id %>">
+      <img class="media-object" src="<%= wall.image %>">
+    </a>
+  </div>
+  <div class="media-body">
+    <strong><p> <%= wall.created.toDateString() %></p></strong>
+    <p class="lead"> <%= wall.body.substring(0,100) %> </p>
+    <p class="author"><span class="glyphicon glyphicon-user"></span> <%= wall.author %><span>&nbsp; <a href="/walls/<%= wall._id %>">Read More</a></span></p>
+    
+  </div>
+</div>
+</div>
+<% }) %>
+
+
+
+
+<% include partials/footer %>

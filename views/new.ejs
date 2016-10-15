@@ -1,0 +1,34 @@
+<% include ./partials/header %>
+
+<% if(err){ %>
+	 <%= err %> 
+<% } %>
+<div class="container">
+<div class="Jumbotron">
+	Think what you feel and share us, by sharing you can feel better.
+
+</div>
+<form action="/walls" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Author</label>
+    <input type="text" class="form-control" name="wall[author]" id="exampleInputEmail1" placeholder="Author">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Image</label>
+    <input type="text" class="form-control" name="wall[image]" id="exampleInputPassword1" placeholder="ADD IMAGE URL">
+  </div>
+
+  <div class="form-group">
+  <label for="body">Body</label>
+  <textarea class="form-control" rows="3" name="wall[body]"> </textarea>
+  </div>
+ 
+  
+  <input type="submit" class="btn btn-primary" value="submit">
+</form>
+
+
+</div>
+
+
+<% include ./partials/footer %>

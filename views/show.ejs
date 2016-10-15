@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+
+<div class="container">
+      <div class=" col-sm-12 row">
+            <div class="col-sm-12">
+                <div class="col-sm-12 thumbnail text-center">
+                    <img alt="" class="img-responsive" src="<%= wall.image %>">
+
+                    <div class="caption">
+                        <h4><%= wall.author %></h4>
+                        <p><%= wall.body %></p>
+                    </div>
+                   <a class="btn btn-info btn-lg" href="/walls/<%= wall._id %>/edit" id="edit">Edit</a>
+                   <form id="delete" method="POST" action="/walls/<%= wall._id %>?_method=DELETE">
+						<button onclick="return confirm('Are you sure you want to delete this item?');" class="btn btn-danger btn-lg">Delete</button>
+					</form>
+                </div>
+            </div>
+
+</div>
+
+
+
+<% include partials/footer %>
