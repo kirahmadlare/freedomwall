@@ -145,6 +145,6 @@ app.delete("/walls/:id",function(req,res){
 });
 
 
-app.listen(port,function(){
+app.listen(port,process.env.IP,function(){
 console.log("server is running");
 });
