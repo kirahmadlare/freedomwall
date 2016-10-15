@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var expressSanitizer = require('express-sanitizer');
 var methodOverride = require('method-override');
-var port = process.env.port || 3000;
+var port = process.env.PORT;
 
 //app config
 
